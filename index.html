@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <div id = "titleArea">
+        <div id = "title" style="padding-bottom: 5px;">Wikipadia Racing</div>
+        <div id = "subtitle">Without Any Pathfinding</div>
+    </div>
+    <!--
+    <div id = "entryArea">
+        <div class = "entry">
+            <div>Starting Article</div>
+            <input type = "text" class = "textInput" list = "startComplete" id = "start">
+            <datalist id = "startComplete" dir="rtl">
+            </datalist>
+        </div>
+        <div id = "arrow"> -> </div>
+        <div class = "entry">
+            Ending Article
+            
+        </div>
+    </div>
+    -->
+
+    <div id = "entryArea">
+        <div class = "infobox">
+            <div>
+                <input onchange="this.blur()" type = "text" class = "textInput" list = "startComplete" id = "start" placeholder="Enter Starting Article" autocomplete="off">
+                <datalist id = "startComplete">
+                </datalist>
+            </div>
+            <div id = "startData">
+                
+            </div>
+        </div>
+
+        <div class = "infobox">
+            <div>
+                <input onchange="this.blur()" type = "text" class = "textInput" list = "endComplete" id = "end" placeholder="Enter Ending Article" autocomplete="off">
+                <datalist id = "endComplete">
+                </datalist>
+            </div>
+            <div id = "endData"></div>
+        </div>
+    </div>
+    <button disabled id = "initiate" onclick="initiate(startArticle, endArticle)">Start</button>
+    <div id = "topTag">
+        <div id = "topContainer">
+            <small id = "extraTopText">Article: 10/150</small>
+            <div id = "mainTopText">From Australia (Q40, Country In Ociania) to Ascociation Football (Q???, Sport)</div>
+            <div id = "returnButtonContainer"><button id = "returnButton" onclick="cancel ()">Stop</button></div>
+        </div>
+    </div>
+    
+    <div id = "steps" style = "display: none;">
+        <div class = "step" id = "currentStep">
+            Reading Article...
+        </div>
+    </div>
+</body>
+
+
+<script src = "script.js"></script>
